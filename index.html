@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/jpg" href="images/logos/favicon_parne.ico" />
+
+    <script src="scripts/navigation.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="scripts/logic.js"></script>
+    <script defer src="scripts/form.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primarybg: "#184C99",
+              buttoncolor: "#4361EE",
+              footercolor: "#F0F0F0",
+            },
+            fontFamily: {
+              Outfit: ["Outfit", "sans-serif"],
+              Montserrat: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+  </head>
+  <body class="bg-purple-200">
+    <main class="relative">
+      <nav
+        class="fixed cursor-pointer z-50 top-5 left-0 mx-6 right-0 md:w-[500px] lg:w-[500px] md:m-auto flex bg-[#1A2630] [&>span]:text-white [&>span>img]:w-4 [&>span>h3]:text-[9px] justify-evenly [&>span]:p-3 rounded-2xl"
+      >
+        <span
+          onclick="openTab(event, 'home')"
+          class="flex flex-col gap-1 items-center"
+        >
+          <img src="images/Mobile/hero/outlineHome.webp" alt="" />
+          <h3>Inicio</h3>
+        </span>
+        <span
+          onclick="openTab(event, 'services')"
+          class="flex flex-col gap-1 items-center"
+        >
+          <img src="images/Mobile/hero/outlineServices.webp" alt="" />
+          <h3>Servicios</h3>
+        </span>
+        <span
+          onclick="openTab(event, 'packages')"
+          class="flex flex-col gap-1 items-center"
+        >
+          <img src="images/Mobile/hero/outlineServices-1.webp" alt="" />
+          <h3>Paquetes</h3>
+        </span>
+        <span
+          onclick="openTab(event, 'about')"
+          class="flex flex-col gap-1 items-center"
+        >
+          <img src="images/Mobile/hero/info_vector.webp" alt="" />
+          <h3>Sobre</h3>
+        </span>
+        <span
+          onclick="openTab(event, 'contact')"
+          class="flex flex-col gap-1 items-center"
+        >
+          <img src="images/Mobile/hero/outlineContact.webp" alt="" />
+          <h3>Contacto</h3>
+        </span>
+      </nav>
+
+      <!--Home/Parne Market:-->
+      <section
+        id="home"
+        class="xl:h-[75vh] pt-24 px-5 bg-primarybg md:px-10 pb-44 lg:m-0 lg:flex lg:px-14 tab-content relative"
+      >
+        <div class="lg:flex-col">
+          <img
+            src="images/logos/horizontal-logo.webp"
+            class="w-[200px] md:w-[400px] my-4 md:my-6"
+            alt=""
+          />
+
+          <h2
+            class="text-white font-Outfit mb-4 font-bold text-4xl lg:text-3xl lg:max-w-[45%] lg:leading-snug lg:mb-10 xl:text-5xl xl:leading-tight"
+          >
+            ¡El Sabor de México y la Modernidad Digital en tu Camino al Éxito!
+          </h2>
+          <h3
+            class="font-Outfit text-white text-lg font-base mb-4 md:mb-2 lg:max-w-[45%] lg:text-lg lg:mb-12 xl:text-lg"
+          >
+            En Parné Market fusionamos la tradición mexicana con las últimas
+            tendencias digitales para llevarte al éxito en línea. Como un
+            vibrante mercado mexicano, te guiamos hacia un futuro donde tus
+            metas digitales se hacen realidad.
+            <span class="hidden lg:inline">
+              Cada cliente satisfecho es un capítulo más en nuestra colorida
+              historia. Confía en nosotros y destaca en el mundo digital.</span
+            >
+          </h3>
+
+          <button
+            class="cursor-pointer hidden font-Outfit bg-buttoncolor lg:flex justify-center gap-1 items-center font-bold w-5/6 mt-4 text-white p-4 rounded-md max-w-80"
+            onclick="openTab(event, 'contact')"
+          >
+            <span> Ponte en contacto</span>
+            <img src="images/Tablet/Hero/rightArrow.webp" class="w-5" alt="" />
+          </button>
+          <img
+            src="images/Mobile/hero/WomanHeroMobileCrop.png"
+            class="hidden lg:block absolute bottom-0 right-0 w-[500px]"
+            alt="Woman-Hero"
+          />
+        </div>
+
+        <!--lg Hidden img-->
+
+        <div class="flex flex-col items-center lg:hidden">
+          <img
+            src="images/Mobile/hero/WomanHeroMobile.png"
+            class="w-[300px] px-0 md:w-3/5"
+            alt="Woman-Hero"
+          />
+
+          <button
+            class="font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-bold w-5/6 text-white p-4 rounded-md -my-5 md:max-w-xs"
+          >
+            <span class="cursor-pointer" onclick="openTab(event, 'contact')">
+              Ponte en contacto</span
+            >
+            <img src="images/Tablet/Hero/rightArrow.webp" class="w-5" alt="" />
+          </button>
+        </div>
+      </section>
+
+      <!--Services=Nuestra Expertise-->
+      <section id="services" class="hidden bg-[#F0F0F0] tab-content pt-24">
+        <div class="pb-9 px-5 md:px-10 md:pb-28">
+          <div class="flex lg:mb-10 flex-col lg:items-center">
+            <div>
+              <h1
+                class="text-[#1A2630] font-Outfit font-bold text-3xl mb-2 md:text-4xl md:mb-4 lg:text-5xl xl:text-6xl lg:mb-3"
+              >
+                Nuestra Expertise a tu
+                <span class="relative inline-block">
+                  <span>Alcance:</span>
+                  <img
+                    src="images/Tablet/Services/lineaazul.webp"
+                    class="w-auto absolute left-0 bottom-0 transform"
+                    alt=""
+                  />
+                </span>
+              </h1>
+            </div>
+            <h2
+              class="text-[#1A2630] font-Outfit font-semibold text-xl lg:text-3xl md:text-xl"
+            >
+              ¿Qué podemos hacer por ti?
+            </h2>
+          </div>
+
+          <div class="flex flex-col lg:flex-row">
+            <div class="flex md:flex justify-center">
+              <img
+                src="images/Mobile/services/ServicesWoman.webp"
+                class="md:max-w-[60%] lg:max-w-[80%] mb-3 lg:w-4/5"
+                alt=""
+              />
+            </div>
+
+            <div
+              class="[&>p]:md:text-xl lg:[&>p]:text-lg xl:[&>p]:text-xl lg:[&>p]:leading-8 [&>p]:mb-6 lg:flex lg:flex-col lg:justify-center"
+            >
+              <!--hidden p/ lg-->
+              <p
+                class="text-[#1A2630] font-Outfit font-normal hidden lg:block mb-7"
+              >
+                Explora un mundo de posibilidades con nuestros
+                <span class="font-bold">servicios digitales</span> con alma
+                mexicana. <br />
+                No solo creamos estrategias, diseñamos experiencias. No solo
+                gestionamos redes sociales,
+                <span class="font-bold">construimos</span> comunidades. No solo
+                desarrollamos sitios web, creamos mundos digitales. <br />
+                Somos tu aliado estratégico para que tu negocio brille con luz
+                propia en el universo digital. Te ofrecemos una amplia gama de
+                servicios <span class="font-bold">personalizados</span>,
+                diseñados a la medida de tus necesidades y objetivos:
+              </p>
+
+              <p
+                class="text-[#1A2630] font-Outfit font-normal text-lg md:text-2xl lg:hidden"
+              >
+                Explora un mundo de posibilidades con nuestros
+                <span class="font-bold">servicios digitales</span> con alma
+                mexicana.
+              </p>
+
+              <p
+                class="text-[#1A2630] font-Outfit font-normal text-lg mb-10 md:text-2xl lg:hidden"
+              >
+                No solo creamos estrategias, diseñamos experiencias. No solo
+                gestionamos redes sociales,
+                <span class="font-bold">construimos</span> comunidades. No solo
+                desarrollamos sitios web, creamos mundos digitales.
+              </p>
+
+              <p
+                class="text-[#1A2630] font-Outfit font-normal text-lg mb-14 md:text-2xl lg:hidden"
+              >
+                Te ofrecemos una amplia gama de servicios
+                <span class="font-bold">personalizados</span>, diseñados a la
+                medida de tus necesidades y objetivos:
+              </p>
+            </div>
+          </div>
+
+          <hr class="lg:mb-6 lg:mt-3" />
+
+          <article
+            class="flex flex-col mb-6 gap-9 justify-center xl:justify-evenly flex-wrap [&>div]:shadow-sm [&>div]:md:max-w-80 [&>div]:lg:max-w-[250px] [&>div]:xl:max-w-[450px] md:flex-row [&>div>h2]:md:text-2xl [&>div>h2]:lg:text-base [&>div>p]:lg:text-base [&>div>img]:md:mb-7 [&>div>p]:md:text-lg lg:[&>div>img]:mb-2 lg:mb-8"
+          >
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service1.webp"
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+              <img
+                src="images/Desktop/Services/service1.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+              <h2 class="text-base mb-4 font-medium">
+                Estrategias Digitales Personalizadas
+              </h2>
+              <p class="text-[#4F5863]">
+                Diseñamos estrategias digitales únicas para iluminar tu marca
+                online. Alineamos tácticas con tus objetivos, optimizando el
+                éxito en el mundo digital.
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service2.webp"
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+              <img
+                src="images/Desktop/Services/service2.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+
+              <h2 class="text-base mb-4 font-medium">
+                Gestión de Redes Sociales Eficaz
+              </h2>
+              <p class="text-[#4F5863]">
+                Creamos una presencia en redes sociales coherente y atractiva.
+                Optimizamos cada aspecto para aumentar el engagement y el
+                reconocimiento de tu marca.
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service3.webp"
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+
+              <img
+                src="images/Desktop/Services/service3.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+              <h2 class="text-base mb-4 font-medium">
+                Visibilidad Digital: PPC, SEO y Contenido
+              </h2>
+              <p class="text-[#4F5863]">
+                Perfeccionamos tu visibilidad online con servicios integrales de
+                PPC, SEO y creación de contenido. Nuestro equipo asegura
+                resultados tangibles y efectivos.
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service4.webp "
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+
+              <img
+                src="images/Desktop/Services/service4.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+              <h2 class="text-base mb-4 font-medium">
+                Diseño de Logotipos Auténticos
+              </h2>
+              <p class="text-[#4F5863]">
+                Celebra tu identidad con un logo único que resuene con tu
+                audiencia y destaque en el mercado.
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service5.webp"
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+              <img
+                src="images/Desktop/Services/service5.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+              <h2 class="text-base mb-4 font-medium">
+                Desarrollo Web de Alto Impacto
+              </h2>
+              <p class="text-[#4F5863]">
+                Creamos sitios web funcionales, optimizados y estéticamente
+                agradables para una experiencia de usuario excepcional.
+                Impulsamos tu negocio online.
+              </p>
+            </div>
+
+            <div class="rounded-lg bg-[#E9F4FF] p-5 font-Outfit">
+              <img
+                src="images/Mobile/services/service6.webp"
+                class="mb-4 lg:hidden"
+                alt=""
+              />
+
+              <img
+                src="images/Desktop/Services/service6.webp"
+                class="hidden lg:block"
+                alt=""
+              />
+              <h2 class="text-base mb-4 font-medium">
+                Identidad Corporativa Integral
+              </h2>
+              <p class="text-[#4F5863]">
+                Desarrollamos una identidad corporativa coherente desde el
+                diseño de logotipos hasta material de marca, asegurando una
+                imagen profesional para tu negocio.
+              </p>
+            </div>
+          </article>
+
+          <div class="hidden md:flex justify-end py-10">
+            <img
+              src="images/Desktop/Packages/arrow.webp"
+              id="back-to-top-arrow2"
+              class="w-14 cursor-pointer"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!--Packages=-->
+      <section
+        id="packages"
+        class="hidden font-Outfit bg-[#184C99] px-5 md:pb-20 tab-content md:px-10 pt-24"
+      >
+        <div
+          class="text-white lg:flex lg:flex-col lg:items-center text-xl mb-10 md:mb-8 md:text-2xl"
+        >
+          <h2
+            class="text-white text-3xl font-bold mb-4 md:text-4xl lg:text-5xl xl:text-6xl lg:text-center lg:mb-6"
+          >
+            Elige tu paquete y
+            <span class="relative inline-block">
+              <span>conquista tu</span>
+              <img
+                src="images/Mobile/Packages/lineablanca.webp"
+                class="w-auto absolute left-0 bottom-0 transform"
+                alt=""
+              />
+            </span>
+            historia digital
+          </h2>
+          <p class="font-medium mb-2">
+            Ofrecemos paquetes diseñados para cubrir todas las necesidades
+            digitales.
+          </p>
+          <p
+            class="font-light text-base md:text-lg lg:text-base md:mb-4 lg:mb-5"
+          >
+            Elige el que mejor se adapte a tus objetivos y comencemos a trabajar
+            juntos mientras destacas en el terrenos de lo digital:
+          </p>
+
+          <button
+            class="lg:text-base text-base lg:p-3 lg:font-medium font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-4/6 mt-2 text-white p-3 rounded-md max-w-72 md:w-48 md:text-lg"
+            onclick="openTab(event, 'contact')"
+          >
+            <span class="cursor-pointer"> Conocer más</span>
+            <img src="images/Tablet/Hero/rightArrow.webp" class="w-5" alt="" />
+          </button>
+        </div>
+
+        <div class="lg:flex lg:justify-center">
+          <article
+            class="flex flex-col gap-14 md:flex-row md:flex-wrap lg:w-[900px] lg:justify-evenly justify-between md:[&>div]:w-[300px] xl:[&>div]:w-[350px]"
+          >
+            <div class="bg-[#E9F4FF] rounded-2xl border shadow-lg">
+              <img src="images/Mobile/Packages/package1.webp" alt="" />
+              <h2 class="px-10 pt-3 mb-4 text-xl">
+                Paquete Básico: La Catrina
+              </h2>
+              <p class="text-[#4F5863] px-10 font-light pb-3 text-lg">
+                Haz que tu presencia en línea cobre vida con un logotipo
+                distintivo y perfiles de redes sociales profesionales. Nuestro
+                equipo te proporciona una consultoría SEO básica para asegurar
+                que empieces con el pie derecho.
+              </p>
+            </div>
+
+            <div class="bg-[#E9F4FF] rounded-2xl border shadow-lg">
+              <img src="images/Mobile/Packages/package2.webp" alt="" />
+              <h2 class="px-10 pt-3 mb-4 text-xl">
+                Paquete Avanzado: Luchador
+              </h2>
+              <p class="text-[#4F5863] px-10 font-light pb-3 text-lg">
+                Lucha por tu lugar en el mercado con un sitio web hecho a
+                medida, optimizado para SEO, y con la integración de Google
+                Analytics para monitorear y mejorar tu desempeño en línea.
+              </p>
+            </div>
+
+            <div class="bg-[#E9F4FF] rounded-2xl border shadow-lg">
+              <img src="images/Mobile/Packages/package3.webp" alt="" />
+              <h2 class="px-10 pt-3 mb-4 text-xl">Paquete Premium: Mariachi</h2>
+              <p class="text-[#4F5863] px-10 font-light pb-3 text-lg">
+                Haz que tu marca resuene con fuerza. Este paquete incluye el
+                diseño de un logotipo, el desarrollo completo de tu identidad
+                corporativa, una estrategia digital personalizada y la gestión
+                integral de tus redes sociales.
+              </p>
+            </div>
+
+            <div class="bg-[#E9F4FF] rounded-2xl border shadow-lg">
+              <img src="images/Mobile/Packages/package4.webp" alt="" />
+              <h2 class="px-10 pt-3 mb-4 text-xl">Paquete Elite: Alebrije</h2>
+              <p class="text-[#4F5863] px-10 font-light pb-3 text-lg">
+                Haz que tu presencia en línea cobre vida con un logotipo
+                distintivo y perfiles de redes sociales profesionales. Nuestro
+                equipo te proporciona una consultoría SEO básica para asegurar
+                que empieces con el pie derecho.
+              </p>
+            </div>
+          </article>
+        </div>
+
+        <div class="md:hidden pt-12 pb-36">
+          <img
+            src="images/Mobile/Packages/arrow.webp"
+            id="back-to-top-arrow"
+            class="w-12 cursor-pointer"
+          />
+        </div>
+      </section>
+
+      <!--About=-->
+      <section
+        id="about"
+        class="hidden md:px-10 font-Outfit bg-[#F0F0F0] px-5 lg:px-16 tab-content pt-24"
+      >
+        <div class="lg:flex lg:flex-col lg:text-center md:pb-12">
+          <h2
+            class="text-3xl xl:text-6xl font-bold mb-4 md:text-4xl lg:text-5xl"
+          >
+            Construye tu éxito
+            <span class="relative inline-block">
+              <span>digital con</span>
+              <img
+                src="images/Tablet/Services/lineaazul.webp"
+                class="w-auto absolute left-0 bottom-0 transform"
+                alt=""
+              />
+            </span>
+            los ingredientes perfectos
+          </h2>
+          <p class="text-xl lg:text-2xl font-medium mb-2">
+            Conoce más sobre Parné Market.
+          </p>
+        </div>
+
+        <!--cards--->
+        <div class="flex flex-col items-center gap-4">
+          <div
+            class="bg-[#E9F4FF] lg:py-10 shadow-sm rounded-lg text-xl leading-6 p-5 lg:flex gap-8"
+          >
+            <div class="lg:w-6/12 flex justify-center items-center">
+              <img
+                src="images/Mobile/About/imgLeft.webp"
+                class="mb-6 lg:max-w-[500px] md:hidden"
+                alt=""
+              />
+
+              <img
+                src="images/Desktop/About/Imgleft.webp"
+                class="mb-6 lg:mb-0 lg:max-w-[400px] xl:max-w-[600px] hidden md:block"
+                alt=""
+              />
+            </div>
+
+            <div class="lg:w-6/12 text-base flex items-center">
+              <p class="text-[#4F5863] md:leading-7 lg:text-sm xl:text-lg">
+                Así como un charro con su sombrero y sarape, en Parné Market
+                hemos recorrido y descubierto las estrategias más efectivas para
+                llevar a las empresas al siguiente nivel en el mundo digital.
+                Hemos atravesado el vasto paisaje del marketing digital y
+                encontrado el camino hacia el éxito. Ahora, queremos compartirlo
+                contigo. Todo lo que necesitas es la estrategia correcta y un
+                equipo de expertos, como una buena receta tradicional, para
+                guiarte. Bienvenido a Parné Market, tus socios en la conquista
+                del mundo digital.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="bg-[#E9F4FF] lg:w-[100%] gap-8 shadow-sm mb-4 rounded-lg text-xl leading-8 p-5 flex lg:flex-row flex-col gap-4"
+          >
+            <div
+              class="md:order-2 lg:w-6/12 lg:flex lg:items-center lg:justify-center"
+            >
+              <img
+                src="images/Mobile/About/womanandMan.webp"
+                class="mb-6 lg:max-w-[400px] xl:max-w-[600px]"
+                alt=""
+              />
+            </div>
+
+            <!--Hidden lg p-->
+            <div
+              class="lg:flex lg:py-10 flex-col lg:w-6/12 justify-center lg:text-sm"
+            >
+              <div class="hidden md:block text-[#4F5863]">
+                <h2 class="font-bold md:text-xl text-2xl mb-12 lg:text-2xl">
+                  ¿Qué nos hace diferentes?
+                </h2>
+
+                <h2
+                  class="xl:text-lg text-xl mb-3 md:text-base md:leading-7 lg:text-sm"
+                >
+                  <span class="font-bold">Experiencia Comprobada:</span> Hemos
+                  ayudado a numerosas empresas a alcanzar sus metas,
+                  construyendo una sólida reputación en el proceso. <br />
+                  <span class="font-bold">Equipo Multidisciplinario:</span>
+                  Nuestro equipo está compuesto por especialistas en diversas
+                  áreas del marketing digital, asegurando un enfoque integral.
+                  <br />
+                  <span class="font-bold"> Resultados Medibles:</span>
+                  Implementamos estrategias basadas en datos que resultan en un
+                  crecimiento real y palpable para tu negocio.
+                </h2>
+              </div>
+
+              <div class="md:hidden">
+                <h2 class="md:text-xl text-lg font-bold mb-6">
+                  ¿Qué nos hace diferentes?
+                </h2>
+                <h2 class="font-bold text-base md:text-lg mb-3 lg:text-lg">
+                  Equipo Multidisciplinario:
+                </h2>
+                <p
+                  class="text-[#4F5863] text-base md:text-base mb-5 md:mb-5 md:leading-7"
+                >
+                  Equipo Multidisciplinario: Nuestro equipo está compuesto por
+                  especialistas en diversas áreas del marketing digital,
+                  asegurando un enfoque integral.
+                </p>
+              </div>
+              <div class="md:hidden">
+                <h2 class="font-bold text-base md:text-lg mb-3 lg:text-lg">
+                  Resultados Medibles:
+                </h2>
+                <p class="text-[#4F5863] text-base md:text-base md:leading-7">
+                  Implementamos estrategias basadas en datos que resultan en un
+                  crecimiento real y palpable para tu negocio.
+                </p>
+              </div>
+
+              <!--Lg p-->
+
+              <div class="flex justify-center md:justify-start">
+                <button
+                  class="lg:text-lg lg:p-3 lg:font-medium text-base font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-5/6 mt-6 md:mt-2 text-white p-4 rounded-md max-w-72 md:w-48 md:text-lg"
+                  onclick="openTab(event, 'contact')"
+                >
+                  <span class="cursor-pointer"> Contacto</span>
+                  <img
+                    src="images/Tablet/Hero/rightArrow.webp"
+                    class="w-5"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Fin Hidden lg p-->
+
+        <div
+          class="text-xl xl:text-lg lg:text-base flex flex-col md:text-lg gap-4 lg:mt-8 mb-8"
+        >
+          <p>
+            Explora un mundo de posibilidades con nuestros
+            <span class="font-bold"> servicios digitales</span>
+            con alma mexicana.
+          </p>
+          <p>
+            No solo creamos estrategias, diseñamos experiencias. No solo
+            gestionamos redes sociales,
+            <span class="font-bold">construimos</span> comunidades. No solo
+            desarrollamos sitios web, creamos mundos digitales.
+          </p>
+          <p>
+            Te ofrecemos una amplia gama de servicios
+            <span class="font-bold">personalizados</span>, diseñados a la medida
+            de tus necesidades y objetivos:
+          </p>
+        </div>
+        <!--Logos--->
+        <div class="flex justify-center lg:hidden pb-10">
+          <div class="grid grid-cols-2 gap-4">
+            <div class="flex justify-center items-center">
+              <img
+                src="images/Mobile/About/Googleads.webp"
+                class="w-[120px]"
+                alt=""
+              />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="images/Mobile/About/Bing.webp"
+                class="w-[30px]"
+                alt=""
+              />
+            </div>
+
+            <div class="flex justify-center items-center">
+              <img src="images/Mobile/About/Wix.webp" class="w-[50px]" alt="" />
+            </div>
+            <div class="flex justify-center items-center">
+              <img
+                src="images/Mobile/About/Wordpress.webp"
+                class="w-[40px]"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <!--Logos lg--->
+
+        <div
+          class="hidden lg:flex w-[90%] justify-evenly items-center border border-[#4F5863] rounded-2xl mx-auto lg:mt-20"
+        >
+          <img
+            src="images/Desktop/About/WordPress.webp"
+            class="w-[70px] h-[70px] object-contain"
+            alt="WordPress"
+          />
+          <img
+            src="images/Desktop/About/Wix.webp"
+            class="w-[80px] h-[80px] object-contain"
+            alt="Wix"
+          />
+          <img
+            src="images/Desktop/About/GoogleAds.webp"
+            class="w-[150px] h-[100px] object-contain"
+            alt="Google Ads"
+          />
+          <img
+            src="images/Desktop/About/Bing.webp"
+            class="w-[40px] h-[40px] object-contain"
+            alt="Bing"
+          />
+        </div>
+      </section>
+
+      <!--Contact=-->
+      <section
+        id="contact"
+        class="hidden md:px-10 bg-[#184C99] px-5 lg:pb-40 pb-12 tab-content pt-24"
+      >
+        <!--titulo subtitulo img-->
+        <div
+          class="font-Outfit text-white lg:flex lg:flex-col lg:items-center text-xl md:mb-8 md:text-2xl mb-7"
+        >
+          <h2
+            class="text-white text-3xl xl:text-6xl font-bold mb-4 md:text-4xl lg:text-center lg:text-5xl"
+          >
+            ¡Un equipo listo para desatar el potencial de tus ideas!
+          </h2>
+          <p class="font-medium mb-2">
+            Cuéntanos más sobre tu negocio y empecemos a trabajar juntos.
+          </p>
+          <p class="font-light md:text-lg lg:text-base md:mb-4 lg:mb-5">
+            Nosotros nos encargaremos de darle ese toque especial mexicano a tu
+            estrategia digital.
+          </p>
+          <div class="flex justify-center items-center">
+            <img
+              src="images/Mobile/Contacto/Contacto.webp"
+              class="w-[100%] md:w-[500px] block lg:hidden"
+              alt=""
+            />
+          </div>
+        </div>
+        <!--form-->
+        <div class="flex lg:px-16 justify-center items-center gap-10">
+          <form
+            id="contactForm"
+            class="bg-[#F0F0F0] px-5 md:w-[650px] lg:w-[800px] rounded-xl p-8 flex flex-col font-medium text-lg gap-6 font-Outfit"
+          >
+            <label for="name">
+              <span>Nombre*</span>
+            </label>
+            <input
+              required
+              pattern="[a-zA-ZÀ-ÿ\s]+"
+              title="Nombre solo acepta letras y espacios en blanco"
+              name="name"
+              placeholder="Tu nombre aquí"
+              type="text"
+              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
+            />
+            <label for="last_name">
+              <span>Apellido*</span>
+            </label>
+            <input
+              required
+              pattern="[a-zA-ZÀ-ÿ\s]+"
+              title="Apellido solo acepta letras y espacios en blanco"
+              name="last_name"
+              placeholder="Tu apellido aquí"
+              type="text"
+              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
+            />
+            <label for="email">
+              <span>Email*</span>
+            </label>
+            <input
+              required
+              pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,5}"
+              title="Ingrese un email válido"
+              name="email"
+              placeholder="Tu email aquí"
+              type="email"
+              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
+            />
+            <label for="tel">
+              <span>Teléfono*</span>
+            </label>
+            <input
+              required
+              pattern="\d{10}"
+              title="Teléfono debe tener 10 dígitos"
+              name="tel"
+              placeholder="Tu Teléfono aquí"
+              type="tel"
+              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
+            />
+            <button
+              class="font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold text-white p-4 rounded-md max-w-72"
+            >
+              <span>Contacto</span>
+              <img
+                src="images/Tablet/Hero/rightArrow.webp"
+                class="w-5"
+                alt=""
+              />
+            </button>
+          </form>
+
+          <img
+            src="images/Mobile/Contacto/Contacto.webp"
+            class="w-[100%] md:w-[500px] lg:w-[350px] hidden lg:block"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <!--Terminos y condiciones=-->
+      <section
+        id="terms"
+        class="hidden md:px-28 bg-[#184C99] px-5 lg:pb-40 pb-12 tab-content pt-24"
+      >
+        <div>
+          <div class="flex flex-col justify-center items-center">
+            <div
+              class="font-Outfit bg-[#E9F4FF] px-10 py-10 rounded-2xl text-[#1A2630] lg:flex lg:flex-col lg:items-center text-xl md:mb-8 md:text-2xl mb-7"
+            >
+              <div class="">
+                <h2
+                  class="text-[#1A2630] text-xl xl:text-6xl font-bold mb-12 md:text-4xl lg:text-center lg:text-5xl"
+                >
+                  Términos y condiciones
+                </h2>
+                <p class="font-base text-sm mb-2">
+                  <span class="font-bold">Introducción</span>
+                  <br />Bienvenido a Parné Market SA de CV. Al utilizar nuestro
+                  sitio web, acepta cumplir y estar sujeto a los siguientes
+                  términos y condiciones de uso, que junto con nuestra política
+                  de privacidad y política de cookies rigen nuestra relación con
+                  usted en relación con este sitio web. Si no está de acuerdo
+                  con alguna parte de estos términos y condiciones, por favor no
+                  utilice nuestro sitio web.
+                  <br />
+                  <br />
+
+                  <span class="font-bold">Definiciones</span> <br />
+                  "Sitio web": Se refiere a nuestro sitio web y servicios.
+                  "Usuario": Se refiere a cualquier persona que acceda y use
+                  nuestro sitio web. "Agencia": Se refiere a Parné Market SA de
+                  CV.
+                  <br /><br />
+                  <span class="font-bold">Uso del sitio web</span> <br />
+                  Nuestro sitio web y su contenido son para su uso general y
+                  están sujetos a cambios sin previo aviso. No garantizamos la
+                  precisión, integridad o actualidad de la información y
+                  materiales que se encuentran en el sitio web.
+
+                  <br /><br />
+                  <span class="font-bold">Limitación de Responsabilidad</span>
+                  <br />
+                  Parné Market SA de CV no será responsable por ningún daño
+                  indirecto, incidental, especial o consecuente que resulte del
+                  uso o la imposibilidad de usar nuestro sitio web. <br /><br />
+
+                  <span class="font-bold">Privacidad y Datos Personales</span
+                  ><br />
+                  Al utilizar nuestro sitio web, acepta que Parné Market SA de
+                  CV recopile y use su información personal de acuerdo con
+                  nuestra Política de Privacidad.
+
+                  <br /><br />
+                  <span class="font-bold">Enlaces a Terceros </span><br />
+                  Nuestro sitio web puede contener enlaces a otros sitios web de
+                  interés. Estos enlaces se proporcionan para su conveniencia y
+                  no significan que aprobamos dichos sitios web. No tenemos
+                  control sobre el contenido de esos sitios web y no aceptamos
+                  ninguna responsabilidad por ellos.
+
+                  <br /><br />
+                  <span class="font-bold"
+                    >Modificaciones de los Términos y Condiciones</span
+                  >
+                  <br />
+                  Parné Market SA de CV se reserva el derecho de modificar estos
+                  términos y condiciones en cualquier momento. Los cambios serán
+                  efectivos inmediatamente después de su publicación en esta
+                  página. Se recomienda a los usuarios revisar estos términos
+                  periódicamente para estar informados de cualquier
+                  modificación.
+
+                  <br /><br /><span class="font-bold"
+                    >Ley Aplicable y Jurisdicción</span
+                  >
+                  <br />
+                  Estos términos y condiciones se rigen por las leyes de México.
+                  Cualquier disputa relacionada con estos términos y condiciones
+                  estará sujeta a la jurisdicción exclusiva de los tribunales de
+                  México.
+
+                  <br /><br /><span class="font-bold">Contacto</span> <br />
+                  Si tiene alguna pregunta sobre estos términos y condiciones,
+                  por favor contáctenos a través del formulario en nuestra
+                  página web.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Politica de privacidad=-->
+      <section
+        id="privacy-policy"
+        class="hidden md:px-28 bg-[#184C99] px-5 lg:pb-40 pb-12 tab-content pt-24"
+      >
+        <!-- Titulo, subtitulo, img -->
+        <div
+          class="flex flex-col justify-center font-Outfit bg-[#E9F4FF] px-10 py-10 rounded-2xl text-[#1A2630] lg:flex lg:flex-col lg:items-center text-xl md:mb-8 md:text-2xl mb-7"
+        >
+          <div class="flex flex-col justify-center items-center">
+            <h2
+              class="text-[#1A2630] text-xl xl:text-6xl font-bold mb-12 md:text-4xl lg:text-center lg:text-5xl"
+            >
+              Política de Privacidad
+            </h2>
+            <p class="font-base text-sm mb-2">
+              <span class="font-bold">Introducción</span><br />
+              En Parné Market SA de CV, valoramos y respetamos su privacidad.
+              Esta Política de Privacidad describe cómo recopilamos, usamos y
+              protegemos su información personal cuando visita y utiliza nuestro
+              sitio web. Al utilizar nuestro sitio, acepta las prácticas
+              descritas en esta política.
+              <br /><br />
+
+              <span class="font-bold">Información que Recopilamos</span><br />
+              Podemos recopilar la siguiente información:
+              <br />
+              ● Información de Contacto: Nombre, dirección de correo
+              electrónico, número de teléfono. <br />
+              ● Información Demográfica: Preferencias, intereses y otra
+              información relevante para encuestas y/o ofertas. <br />
+              ● Información de Uso: Datos sobre cómo usa nuestro sitio web,
+              incluidas las páginas que visita y las acciones que realiza.
+              <br /><br />
+
+              <span class="font-bold">Uso de la Información Recopilada</span
+              ><br />
+              La información que recopilamos se utiliza para los siguientes
+              propósitos:
+              <br />
+              ● Mejorar Nuestro Servicio: Analizar el uso del sitio web para
+              mejorar nuestros servicios y la experiencia del usuario. <br />
+              ● Comunicación: Enviar correos electrónicos promocionales sobre
+              nuevos productos, ofertas especiales u otra información que
+              creemos que puede resultar de su interés. <br />
+              ● Personalización: Personalizar el sitio web de acuerdo con sus
+              intereses y preferencias.
+              <br /><br />
+
+              <span class="font-bold">Compartir Información con Terceros</span
+              ><br />
+              ● Proveedores de Servicios: Podemos compartir información con
+              proveedores de servicios que nos ayudan a operar el sitio web,
+              siempre que estos proveedores acuerden mantener la información
+              confidencial. <br />
+              ● Requisitos Legales: Podemos divulgar su información cuando lo
+              requiera la ley o en respuesta a solicitudes legales de las
+              autoridades.
+              <br /><br />
+
+              <span class="font-bold">Protección de la Información</span><br />
+              Estamos comprometidos a garantizar que su información esté segura.
+              Para evitar el acceso o divulgación no autorizados, hemos
+              implementado procedimientos físicos, electrónicos y
+              administrativos adecuados para salvaguardar y proteger la
+              información que recopilamos en línea.
+              <br /><br />
+
+              <span class="font-bold">Control de su Información Personal</span
+              ><br />
+              Puede elegir restringir la recopilación o el uso de su información
+              personal de las siguientes maneras: <br />
+              ● Formularios de Registro: Siempre que se le pida que complete un
+              formulario en el sitio web, busque la casilla que puede marcar
+              para indicar que no desea que la información sea utilizada por
+              nadie para fines de marketing directo. <br />
+              ● Cancelación de Suscripción: Si ha aceptado previamente que
+              usemos su información personal para fines de marketing directo,
+              puede cambiar de opinión en cualquier momento contactándonos a
+              través del formulario en nuestra página web.
+              <br /><br />
+
+              <span class="font-bold">Derechos del Usuario</span><br />
+              Usted tiene derecho a: <br />
+              ● Acceso: Solicitar una copia de la información que tenemos sobre
+              usted.
+              <br />
+              ● Rectificación: Corregir cualquier dato que tengamos sobre usted
+              que sea inexacto o incompleto. <br />
+              ● Borrado: Solicitar que eliminemos sus datos personales, bajo
+              ciertas condiciones. <br />
+              ● Restricción del Procesamiento: Solicitar que restrinjamos el
+              procesamiento de sus datos personales, bajo ciertas condiciones.
+              <br />
+              ● Portabilidad de Datos: Solicitar que transfiramos los datos que
+              hemos recopilado a otra organización, o directamente a usted, bajo
+              ciertas condiciones.
+              <br /><br />
+
+              <span class="font-bold">Cambios en la Política de Privacidad</span
+              ><br />
+              Parné Market SA de CV puede actualizar esta política de privacidad
+              en cualquier momento. Se recomienda revisar esta página
+              periódicamente para estar informado de cualquier cambio. Los
+              cambios serán efectivos inmediatamente después de su publicación
+              en esta página.
+              <br /><br />
+
+              <span class="font-bold">Contacto</span><br />
+              Si tiene alguna pregunta sobre esta Política de Privacidad o si
+              desea ejercer alguno de sus derechos, por favor contáctenos a
+              través del formulario en nuestra página web.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--Politica de cookies=-->
+      <section
+        id="cookies"
+        class="hidden md:px-28 bg-[#184C99] px-5 lg:pb-40 pb-12 tab-content pt-24"
+      >
+        <div class="flex flex-col justify-center">
+          <div
+            class="font-Outfit bg-[#E9F4FF] px-10 py-10 rounded-2xl text-[#1A2630] lg:flex lg:flex-col lg:items-center text-xl md:mb-8 md:text-2xl mb-7"
+          >
+            <div class="flex flex-col justify-center items-center">
+              <h2
+                class="text-[#1A2630] text-xl xl:text-6xl font-bold mb-12 md:text-4xl lg:text-center lg:text-5xl"
+              >
+                Política de Cookies
+              </h2>
+              <p class="font-base text-sm mb-2">
+                <span class="font-bold">Introducción</span><br />
+                En Parné Market SA de CV, implementamos cookies y tecnologías
+                análogas para optimizar su experiencia en nuestro sitio web.
+                Esta Política de Cookies detalla la naturaleza de las cookies,
+                su aplicación y las opciones disponibles para su gestión.
+                <br /><br />
+
+                <span class="font-bold">¿Qué Son las Cookies?</span><br />
+                Las cookies son pequeños archivos de texto almacenados en su
+                dispositivo (computadora, tableta, teléfono inteligente, etc.)
+                cuando accede a un sitio web. Estos archivos permiten al sitio
+                web reconocer su dispositivo y recordar ciertas preferencias o
+                acciones anteriores.
+                <br /><br />
+
+                <span class="font-bold">Tipos de Cookies que Utilizamos</span
+                ><br />
+                ● Cookies Esenciales: Estas cookies son indispensables para el
+                funcionamiento correcto del sitio web. Facilitan la navegación y
+                el uso de funciones esenciales, como el acceso a áreas seguras.
+                Sin estas cookies, no se pueden proporcionar los servicios
+                solicitados. <br />
+                ● Cookies de Rendimiento: Estas cookies recogen datos sobre cómo
+                los visitantes usan el sitio web, como las páginas más
+                frecuentadas y los mensajes de error recibidos. No recopilan
+                información que identifique al usuario. Toda la información
+                recabada es agregada y anónima, y se utiliza exclusivamente para
+                mejorar el rendimiento del sitio web. <br />
+                ● Cookies de Funcionalidad: Estas cookies permiten al sitio web
+                recordar las elecciones realizadas por el usuario (por ejemplo,
+                nombre de usuario, idioma o región) y proporcionar
+                características personalizadas y mejoradas. Pueden usarse para
+                recordar cambios en el tamaño del texto, fuentes y otras partes
+                del sitio web que el usuario puede personalizar, así como para
+                proporcionar servicios solicitados, como ver videos o comentar
+                en blogs. La información recopilada puede ser anonimizada y no
+                rastrea la actividad de navegación en otros sitios web. <br />
+                ● Cookies de Publicidad: Estas cookies son empleadas para
+                presentar anuncios relevantes basados en sus intereses. También
+                se usan para limitar la cantidad de veces que ve un anuncio y
+                para medir la efectividad de las campañas publicitarias.
+                Generalmente, son colocadas por redes publicitarias con el
+                permiso del operador del sitio web. Recuerdan que usted ha
+                visitado un sitio web y esta información se comparte con otras
+                organizaciones, como anunciantes. A menudo, estas cookies están
+                vinculadas a la funcionalidad del sitio proporcionada por otras
+                organizaciones.
+                <br /><br />
+
+                <span class="font-bold"> Uso de Cookies </span><br />
+                En Parné Market SA de CV, utilizamos cookies para: <br />
+                ● Personalización de Experiencia: Adaptar contenido y anuncios
+                según sus intereses y preferencias. <br />
+                ● Análisis de Tráfico del Sitio: Recopilar información sobre
+                cómo interactúan los usuarios con nuestro sitio web para mejorar
+                su funcionalidad y la experiencia del usuario. <br />
+                ● Provisión de Funciones Específicas: Recordar sus preferencias
+                y configuraciones, como idioma preferido o credenciales de
+                inicio de sesión. <br />
+                ● Mejora de Seguridad: Asegurar la seguridad de su sesión y
+                proteger nuestros servicios contra fraudes y abusos <br /><br />
+
+                <span class="font-bold"> Gestión de Cookies </span><br />
+                Usted tiene control sobre las cookies y puede gestionar sus
+                configuraciones en cualquier momento de la siguiente manera:
+                <br />
+                <br />
+                ● Configuración del Navegador: La mayoría de los navegadores web
+                permiten controlar las cookies a través de sus configuraciones.
+                Puede configurar su navegador para que le notifique antes de
+                aceptar cookies o para rechazarlas. Sin embargo, si decide
+                rechazar las cookies, es posible que no pueda utilizar todas las
+                funciones de nuestro sitio web. <br />
+                ● Deshabilitar Cookies: Para deshabilitar las cookies, siga las
+                instrucciones proporcionadas por su navegador (generalmente
+                ubicadas en las configuraciones de "Ayuda", "Herramientas" o
+                "Editar"). Note que deshabilitar las cookies puede afectar la
+                funcionalidad de este y otros sitios web que visite.<br /><br />
+              </p>
+
+              <br /><br />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="px-5 bg-[#F0F0F0] font-Montserrat lg:flex lg:justify-evenly lg:gap-14 lg:p-12"
+    >
+      <div class="flex justify-center items-center">
+        <img
+          src="images/logos/parne 4.webp"
+          class="w-20 mt-2 mb-4 md:w-24 lg:w-32"
+          alt=""
+        />
+      </div>
+
+      <div
+        class="font-bold text-base md:flex lg:items-center [&>div>h3]:md:text-lg [&>div>span]:md:text-sm"
+      >
+        <div
+          class="flex flex-col gap-8 mb-6 [&>span]:text-xs flex-1 [&>span]:text-[#4F5863] md:mb-0 lg:gap-4"
+        >
+          <h3 class="text-[#1A2630]">Compañia</h3>
+          <span class="cursor-pointer" onclick="openTab(event, 'home')"
+            >Inicio</span
+          >
+          <span class="cursor-pointer" onclick="openTab(event, 'services')"
+            >Servicios</span
+          >
+          <span class="cursor-pointer" onclick="openTab(event, 'packages')"
+            >Paquetes</span
+          >
+          <span class="cursor-pointer" onclick="openTab(event, 'about')"
+            >Sobre</span
+          >
+        </div>
+
+        <div
+          class="flex flex-col gap-8 [&>span]:text-xs mb-16 flex-1 [&>span]:text-[#4F5863] md:mb-0 lg:gap-4"
+        >
+          <h3 class="text-[#1A2630]">Legal</h3>
+          <span class="cursor-pointer" onclick="openTab(event, 'terms')"
+            >Términos y Condiciones</span
+          >
+          <span
+            class="cursor-pointer"
+            onclick="openTab(event, 'privacy-policy')"
+            >Política de Privacidad</span
+          >
+          <span onclick="openTab(event, 'cookies')" class="cursor-pointer"
+            >Cookies</span
+          >
+        </div>
+
+        <div
+          class="flex flex-col gap-8 [&>span]:text-xs flex-1 [&>span]:text-[#4F5863] mb-16 md:mb-0 lg:gap-4"
+        >
+          <h3 class="text-[#1A2630]">Ponerse en contacto</h3>
+          <span
+            >La quemada 439, Oficina 16, 03600, Vertiz Narvarte, Benito Juárez,
+            Ciudad de México</span
+          >
+
+          <span class="cursor-pointer" onclick="openTab(event, 'contact')"
+            >Contacto</span
+          >
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col gap-4 lg:gap-0 items-center justify-center lg:w-12"
+      >
+        <img
+          src="images/Mobile/hero/circle.webp"
+          class="w-14 md:w-20"
+          alt="heart-icon"
+        />
+
+        <div
+          class="font-bold mb-6 w-4/5 text-center [&>span]:text-xs [&>span]:md:text-base lg:hidden"
+        >
+          <span>
+            Parné Market SA de CV | 2024 | Todos los derechos reservados</span
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
