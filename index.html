@@ -15,6 +15,7 @@
     />
 
     <link rel="icon" type="image/jpg" href="images/logos/favicon_parne.ico" />
+    <script defer src="scripts/flag.js"></script>
 
     <script src="scripts/navigation.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,6 +59,23 @@
       }
       optgroup {
         font-size: 10px;
+      }
+
+      .input-with-icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+      }
+
+      .input-with-icon .icon {
+        position: absolute;
+        left: 10px;
+        width: 20px;
+        height: 15px;
+      }
+
+      .input-with-icon input {
+        padding-left: 40px; /* Ajusta este valor según el tamaño de la imagen */
       }
     </style>
 
@@ -136,6 +154,7 @@
           </h3>
 
           <button
+            data-paquete="none"
             class="cursor-pointer hidden font-Outfit bg-buttoncolor lg:flex justify-center gap-1 items-center font-bold w-5/6 mt-4 text-white p-4 rounded-md max-w-80"
             onclick="openTab(event, 'contact')"
           >
@@ -159,11 +178,11 @@
           />
 
           <button
-            class="font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-bold w-5/6 text-white p-4 rounded-md -my-5 md:max-w-xs"
+            data-paquete="none"
+            onclick="openTab(event, 'contact')"
+            class="interesa5 font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-bold w-5/6 text-white p-4 rounded-md -my-5 md:max-w-xs"
           >
-            <span class="cursor-pointer" onclick="openTab(event, 'contact')">
-              Ponte en contacto</span
-            >
+            <span class="cursor-pointer"> Ponte en contacto</span>
             <img src="images/Tablet/Hero/rightArrow.webp" class="w-5" alt="" />
           </button>
         </div>
@@ -211,13 +230,16 @@
               <p
                 class="text-[#1A2630] font-Outfit font-normal hidden lg:block mb-7 lg:w-[700px]"
               >
-                Explora un mundo de posibilidadeS con nuestros
+                Explora un mundo de posibilidades con nuestros
                 <span class="font-bold">servicios digitales</span> con alma
                 mexicana. <br />
+                <br />
+
                 No solo creamos estrategias, diseñamos experiencias. No solo
                 gestionamos redes sociales,
                 <span class="font-bold">construimos</span> comunidades. No solo
                 desarrollamos sitios web, creamos mundos digitales. <br />
+                <br />
                 Somos tu aliado estratégico para que tu negocio brille con luz
                 propia en el universo digital. Te ofrecemos una amplia gama de
                 servicios <span class="font-bold">personalizados</span>,
@@ -443,7 +465,8 @@
           </p>
 
           <button
-            class="lg:text-base text-base lg:p-3 lg:font-medium font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-4/6 mt-2 text-white p-3 rounded-md max-w-72 md:w-48 md:text-lg"
+            data-paquete="none"
+            class="interesa6 lg:text-base text-base lg:p-3 lg:font-medium font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-4/6 mt-2 text-white p-3 rounded-md max-w-72 md:w-48 md:text-lg"
             onclick="openTab(event, 'contact')"
           >
             <span class="cursor-pointer"> Conocer más</span>
@@ -697,9 +720,11 @@
                   <span class="font-bold"> ●Experiencia Comprobada:</span> Hemos
                   ayudado a numerosas empresas a alcanzar sus metas,
                   construyendo una sólida reputación en el proceso. <br />
+                  <br />
                   <span class="font-bold">●Equipo Multidisciplinario:</span>
                   Nuestro equipo está compuesto por especialistas en diversas
                   áreas del marketing digital, asegurando un enfoque integral.
+                  <br />
                   <br />
                   <span class="font-bold">●Resultados Medibles:</span>
                   Implementamos estrategias basadas en datos que resultan en un
@@ -736,7 +761,8 @@
 
               <div class="flex justify-center md:justify-start">
                 <button
-                  class="lg:text-lg lg:p-3 lg:font-medium text-base font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-5/6 mt-6 md:mt-2 text-white p-4 rounded-md max-w-72 md:w-48 md:text-lg"
+                  data-paquete="none"
+                  class="interesa6 lg:text-lg lg:p-3 lg:font-medium text-base font-Outfit bg-buttoncolor flex justify-center gap-1 items-center font-semibold w-5/6 mt-6 md:mt-2 text-white p-4 rounded-md max-w-72 md:w-48 md:text-lg"
                   onclick="openTab(event, 'contact')"
                 >
                   <span class="cursor-pointer"> Contacto</span>
@@ -760,12 +786,14 @@
             <span class="font-bold"> servicios digitales</span>
             con alma mexicana.
           </p>
+
           <p>
             No solo creamos estrategias, diseñamos experiencias. No solo
             gestionamos redes sociales,
             <span class="font-bold">construimos</span> comunidades. No solo
             desarrollamos sitios web, creamos mundos digitales.
           </p>
+
           <p>
             Te ofrecemos una amplia gama de servicios
             <span class="font-bold">personalizados</span>, diseñados a la medida
@@ -905,25 +933,29 @@
             <label for="tel">
               <span>Teléfono*</span>
             </label>
-            <input
-              required
-              pattern="\d{10}"
-              title="Teléfono debe tener 10 dígitos"
-              name="tel"
-              placeholder="Tu Teléfono aquí"
-              type="tel"
-              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
-            />
+
+            <div class="input-with-icon">
+              <img id="country-flag" src="" class="icon" alt="phone icon" />
+              <input
+                required
+                pattern="^\+52\d{10}$"
+                title="Teléfono debe tener 10 dígitos"
+                name="tel"
+                id="tel"
+                type="tel"
+                class="bg-[#F0F0F0] border border-white p-2 rounded-md w-full"
+              />
+            </div>
             <label for="interest">
-              <span>Interés*</span>
+              <span>Interés</span>
             </label>
             <select
               name="interest"
               id="interest"
-              class="bg-[#F0F0F0] border border-white p-2 rounded-md"
+              class="bg-[#F0F0F0] border border-white p-2 rounded-md w-full"
             >
               <optgroup>
-                <option value="">Selecciona una opción</option>
+                <option value="none">Seleccionar</option>
                 <option value="catrina">Catrina</option>
                 <option value="luchador">Luchador</option>
                 <option value="mariachi">Mariachi</option>
@@ -1370,8 +1402,8 @@
             >Teléfono: 5575160482</span
           >
           <span class="cursor-pointer" onclick="openTab(event, 'contact')"
-            >parnemarket@contacto.com</span
-          >
+            >contacto@parnemarket.com
+          </span>
         </div>
       </div>
 

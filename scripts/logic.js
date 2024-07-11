@@ -14,38 +14,47 @@ let $btnInteresa = document.querySelector(".interesa");
 let $btnInteresa2 = document.querySelector(".interesa2");
 let $btnInteresa3 = document.querySelector(".interesa3");
 let $btnInteresa4 = document.querySelector(".interesa4");
+let $btnInteresa5 = document.querySelector(".interesa5");
+let $btnInteresa6 = document.querySelector(".interesa6");
 
 $btnInteresa.addEventListener("click", () => {
-  console.log("btnMeInteresa");
   let value = $btnInteresa.getAttribute("data-paquete");
-  console.log(value);
+
   selectOption(value);
 });
 
 $btnInteresa2.addEventListener("click", () => {
-  console.log("btnMeInteresa2");
   let value = $btnInteresa2.getAttribute("data-paquete");
-  console.log(value);
+
   selectOption(value);
 });
 
 $btnInteresa3.addEventListener("click", () => {
-  console.log("btnMeInteresa2");
   let value = $btnInteresa3.getAttribute("data-paquete");
-  console.log(value);
+
   selectOption(value);
 });
 
 $btnInteresa4.addEventListener("click", () => {
-  console.log("btnMeInteresa2");
   let value = $btnInteresa4.getAttribute("data-paquete");
+
+  selectOption(value);
+});
+
+$btnInteresa5.addEventListener("click", () => {
+  let value = $btnInteresa5.getAttribute("data-paquete");
+  console.log(value);
+  selectOption(value);
+});
+
+$btnInteresa6.addEventListener("click", () => {
+  let value = $btnInteresa6.getAttribute("data-paquete");
   console.log(value);
   selectOption(value);
 });
 
 // Cambiar valor del formulario al clickear el botón
 function selectOption(value) {
-  console.log(value, "valor recibido");
   const selectElement = document.getElementById("interest");
   selectElement.value = value;
 }
